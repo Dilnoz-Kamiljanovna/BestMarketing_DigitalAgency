@@ -1,9 +1,8 @@
-@import 'variables/normalize';
-@import 'variables/settings';
-@import 'variables/mixins';
-@import 'variables/variable';
-@import 'variables/_font';
-@import 'variables/_media';
+@import "variables/normalize";
+@import "variables/settings";
+@import "variables/mixins";
+@import "variables/variable";
+@import "variables/_font";
 
-@import 'components/header-top';
-@import 'components/header-banner';
+@import "components/header-top";
+// @import "components/header-banner";

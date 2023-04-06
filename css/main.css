@@ -5,6 +5,10 @@
   margin: 0 auto;
 }
 
+body {
+  background: linear-gradient(65.25deg, rgba(255, 255, 255, 0.49) -1.59%, rgba(255, 255, 255, 0.46) 99.42%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,14 +18,57 @@
 }
 
 @font-face {
-  font-family: "";
+  font-family: "Mulish-ExtraBold";
+  src: url(/fonts/Mulish-ExtraBold.ttf) format(ttf);
+  font-size: 800;
+}
+@font-face {
+  font-family: "Mulish-Bold";
+  src: url(/fonts/Mulish-Bold.ttf) format(ttf);
+  font-size: 700;
+}
+@font-face {
+  font-family: "Mulish-SemiBold";
+  src: url(/fonts/Mulish-SemiBold.ttf) format(ttf);
+  font-size: 600;
+}
+@font-face {
+  font-family: "Mulish-Regular";
+  src: url(/fonts/Mulish-Regular.ttf) format(ttf);
+  font-size: 400;
+}
+@font-face {
+  font-family: "Manrope-SemiBold";
+  src: url(/fonts/Manrope-SemiBold.ttf) format(ttf);
+  font-size: 600;
+}
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url(/fonts/Manrope-Regular.ttf) format(ttf);
+  font-size: 400;
+}
+@font-face {
+  font-family: "DMSans Medium";
+  src: url(/fonts/DMSans-Medium.ttf) format(ttf);
+  font-size: 500;
+}
+@font-face {
+  font-family: "DMSans Regular";
+  src: url(/fonts/DMSans-Regular.ttf) format(ttf);
+  font-size: 400;
 }
 .header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 39px;
-  text-transform: capitalize !important;
+  text-transform: capitalize;
+}
+.header-top__link {
+  width: 189px;
+}
+.header-top__link_logo {
+  width: 100%;
 }
 .header-top__nav {
   max-width: 466px;
@@ -34,6 +81,7 @@
   font-size: 16px;
   line-height: 28px;
   color: #150A29;
+  font-family: "Manrope-SemiBold";
 }
 .header-top__btn {
   width: 137px;
@@ -43,6 +91,70 @@
   background: #FD695A;
   color: #FFFFFF;
   border: none;
+  cursor: pointer;
   font-size: 16px;
   line-height: 28px;
+  font-family: "Mulish-SemiBold";
+}
+
+.header-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-banner__info {
+  max-width: 607px;
+  width: 100%;
+}
+.header-banner__info_title {
+  width: 100%;
+  font-family: "Mulish-ExtraBold";
+  font-size: 70px;
+  line-height: 94px;
+  text-transform: capitalize;
+  color: #3D3D3F;
+}
+.header-banner__info_title span {
+  color: #FD695A;
+}
+.header-banner__info_text {
+  max-width: 464px;
+  width: 100%;
+  font-family: "Manrope-Regular";
+  font-size: 21px;
+  line-height: 34px;
+  color: #3D3D3F;
+  opacity: 0.75;
+  margin-block: 53px 64px;
+}
+.header-banner__info_items {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+.header-banner__info_items button {
+  width: 162px;
+  height: 59px;
+  border-radius: 50px;
+  background: #FD695A;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  font-family: "Mulish-Bold";
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: capitalize;
+}
+.header-banner__info_items a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.header-banner__info_items a div {
+  background: #FFFFFF;
+}
+.header-banner__info_items a div img {
+  width: 16px;
+  margin: 15px 17px;
 }/*# sourceMappingURL=main.css.map */

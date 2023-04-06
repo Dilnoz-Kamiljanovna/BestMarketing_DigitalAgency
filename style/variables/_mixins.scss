@@ -14,5 +14,7 @@
     border-radius: 50px;
     background: $orange;
     color: $white;
-    border: none;
+    border: solid 2px $orange;
+    cursor: pointer;
+    transition: .5s;
 }

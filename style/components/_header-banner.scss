@@ -1,0 +1,56 @@
+.header-banner {
+  @include flexBetween;
+
+  &__info {
+    max-width: 607px;
+    width: 100%;
+    &_title {
+      width: 100%;
+      font-family: $MuE;
+      font-size: 70px;
+      line-height: 94px;
+      text-transform: capitalize;
+      color: $grey;
+      & span {
+        color: $orange;
+      }
+    }
+    &_text {
+      max-width: 464px;
+      width: 100%;
+      font-family: $MaR;
+      font-size: 21px;
+      line-height: 34px;
+      color: $grey;
+      opacity: 0.75;
+      margin-block: 53px 64px;
+    }
+    &_items {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+      & button {
+        width: 162px;
+        height: 59px;
+        @include btn;
+        font-family: $MuB;
+        font-size: 18px;
+        line-height: 28px;
+        text-transform: capitalize;
+      }
+      & a {
+        @include flexBetween;
+        gap: 16px;
+        & div {
+            background: $white;
+            & img {
+                width: 16px;
+                margin: 15px 17px;
+                // background: $white;
+            }
+        }
+
+      }
+    }
+  }
+}
