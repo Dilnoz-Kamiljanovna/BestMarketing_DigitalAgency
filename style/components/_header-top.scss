@@ -1,0 +1,27 @@
+.header {
+  &-top {
+    @include flexBetween;
+    padding-top: 39px;
+    text-transform: capitalize !important;
+
+    &__nav {
+      max-width: 466px;
+      width: 100%;
+      @include flexBetween;
+      &_link {
+        font-size: 16px;
+        line-height: 28px;
+        color: $dark;
+      }
+    }
+
+    &__btn {
+      width: 137px;
+      height: 50px;
+      text-transform: capitalize;
+      @include btn;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}
