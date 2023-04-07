@@ -13,24 +13,43 @@
         <div class="header-top">
           <a href="#" class="header-top__link">
             <img
-            src="images/Logo_Best-Marketing_digital-agency.svg"
-            alt=""
-            class="header-top__link_logo"
-          />
+              src="images/Logo_Best-Marketing_digital-agency.svg"
+              alt=""
+              class="header-top__link_logo"
+            />
           </a>
           <nav class="header-top__nav">
             <a href="" class="header-top__nav_link">features</a
             ><a href="" class="header-top__nav_link">pricing & plans</a
             ><a href="" class="header-top__nav_link">support</a
             ><a href="" class="header-top__nav_link">about us</a>
-            <div class="header-top__nav_burger">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
           </nav>
+          <div class="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <button class="header-top__btn">contact us</button>
         </div>
+
+        <form class="form">
+          <div class="form-head">
+            <img src="images/Logo_Best-Marketing_digital-agency.svg" alt="">
+            <button>
+              <div></div>
+              <div></div>
+            </button>
+          </div>
+          <div class="form-info">
+            <label for="name" class="form-info__text">Enter your name:</label>
+            <input type="text" id="name" class="form-info__inp" placeholder="Name" />
+          </div>
+          <div class="form-info">
+            <label for="email" class="form-info__text">Enter your email:</label>
+            <input type="email" id="email" class="form-info__inp" placeholder="Email" />
+          </div>
+          <button type="submit" class="form-btn">Send</button>
+        </form>
         <!-- <div class="header-banner">
           <div class="header-banner__info">
             <h1 class="header-banner__info_title">
@@ -50,7 +69,26 @@
           </div>
           <img src="images/Happy_girls.png" alt="" class="header-banner__img"/>
         </div> -->
+        <button
+          style="
+            border: none;
+            background: white;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+          "
+        >
+          <img
+            src="images/Vector_play.svg"
+            alt=""
+            style="padding: 15px; background: antiquewhite; border-radius: 50%"
+          />
+          Watch Video
+        </button>
       </div>
     </header>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

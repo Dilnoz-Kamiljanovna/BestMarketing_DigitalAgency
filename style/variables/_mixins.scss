@@ -17,4 +17,8 @@
     border: solid 2px $orange;
     cursor: pointer;
     transition: .5s;
+    button:hover {
+        background: $white;
+        color: $orange;
+    }
 }
