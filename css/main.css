@@ -76,17 +76,27 @@ body {
   width: 100%;
 }
 .header-top__nav {
-  max-width: 466px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 52px;
 }
 .header-top__nav_link {
   font-size: 16px;
   line-height: 28px;
   color: #150A29;
   font-family: "Manrope-SemiBold";
+  transition: 1s;
+  position: relative;
+}
+.header-top__nav_link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 10px;
+  height: 2px;
+  color: #FD695A;
 }
 .header-top__btn {
   width: 137px;
@@ -102,7 +112,7 @@ body {
   line-height: 28px;
   font-family: "Mulish-SemiBold";
 }
-.header-top__btn button:hover {
+.header-top__btn:hover {
   background: #FFFFFF;
   color: #FD695A;
 }
@@ -149,6 +159,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 20px;
 }
 .form-head img {
   width: 120px;
@@ -156,6 +167,7 @@ body {
   padding: 7px;
   background: rgba(255, 255, 255, 0.6980392157);
   border-radius: 10px;
+  color: #FFFFFF;
 }
 .form-head button {
   width: 30px;
@@ -163,20 +175,12 @@ body {
   border-radius: 50%;
   border: none;
 }
-.form-head button div {
-  width: 15px;
-  height: 2px;
-  margin: auto;
-  background: #FD695A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.form-head button i {
+  color: #FD695A;
 }
-.form-head button div:nth-child(1) {
-  transform: rotate(57deg);
-}
-.form-head button div:nth-child(2) {
-  transform: rotate(-57deg);
+.form-head button i .hidden {
+  transform: translateX(-50%);
+  transform: translateY(-100%);
 }
 .form-info {
   display: flex;
@@ -185,19 +189,20 @@ body {
 }
 .form-info__text {
   font-family: "Manrope-Regular";
-  font-size: 21px;
-  line-height: 34px;
+  font-size: 20px;
+  line-height: 24px;
   color: #FFFFFF;
 }
 .form-info__inp {
-  max-width: 300px;
+  max-width: 500px;
   width: 100%;
   padding: 5px;
   border: none;
   border-radius: 5px;
   font-family: "Manrope-Regular";
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #747474;
   outline: none;
 }
 .form-btn {
@@ -215,7 +220,74 @@ body {
   font-size: 22px;
   line-height: 27px;
 }
-.form-btn button:hover {
+.form-btn:hover {
   background: #FFFFFF;
   color: #FD695A;
+}
+
+.header-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-banner__info {
+  max-width: 607px;
+  width: 100%;
+}
+.header-banner__info_title {
+  width: 100%;
+  font-family: "Mulish-ExtraBold";
+  font-size: 70px;
+  line-height: 94px;
+  text-transform: capitalize;
+  color: #3D3D3F;
+}
+.header-banner__info_title span {
+  color: #FD695A;
+}
+.header-banner__info_text {
+  max-width: 464px;
+  width: 100%;
+  font-family: "Manrope-Regular";
+  font-size: 21px;
+  line-height: 34px;
+  color: #3D3D3F;
+  opacity: 0.75;
+  margin-block: 53px 64px;
+}
+.header-banner__info_items {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+.header-banner__info_items button {
+  width: 162px;
+  height: 59px;
+  border-radius: 50px;
+  background: #FD695A;
+  color: #FFFFFF;
+  border: solid 2px #FD695A;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Mulish-Bold";
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: capitalize;
+}
+.header-banner__info_items button:hover {
+  background: #FFFFFF;
+  color: #FD695A;
+}
+.header-banner__info_items a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.header-banner__info_items a div {
+  background: #FFFFFF;
+}
+.header-banner__info_items a div img {
+  width: 16px;
+  margin: 15px 17px;
 }/*# sourceMappingURL=main.css.map */

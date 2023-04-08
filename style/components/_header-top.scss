@@ -28,14 +28,28 @@
     }
 
     &__nav {
-      max-width: 466px;
-      width: 100%;
+      // max-width: 466px;
+      // width: 100%;
       @include flexBetween;
+      gap: 52px;
       &_link {
+        // display: block;
         font-size: 16px;
         line-height: 28px;
         color: $dark;
         font-family: $MaS;
+        transition: 1s;
+        position: relative;
+        &:hover::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 14px;
+          width: 10px;
+          height: 2px;
+          color: $orange;
+          // text-decoration: underline;
+        }
       }
     }
 
@@ -88,62 +102,72 @@
   // opacity: 0;
   // z-index: -1;
 
-  &.open{
+  &.open {
     transform: translateY(0%);
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
   }
   &-head {
     @include flexBetween;
+    padding-bottom: 20px;
     & img {
       width: 120px;
       margin: 0;
       padding: 7px;
       background: $whiteOpacity;
       border-radius: 10px;
+      color: $white;
     }
     & button {
       width: 30px;
       height: 30px;
       border-radius: 50%;
       border: none;
-      & div {
-        width: 15px;
-        height: 2px;
-        margin: auto;
-        background: $orange;
-        @include flexCenter;
+      & i {
+        color: $orange;
+        & .hidden {
+          transform: translateX(-50%);
+          transform: translateY(-100%);
+        }
       }
-      & div:nth-child(1) {
-        transform: rotate(57deg);
-      }
-      & div:nth-child(2) {
-        transform: rotate(-57deg);
-      }
+      // & div {
+      //   width: 15px;
+      //   height: 2px;
+      //   margin: auto;
+      //   background: $orange;
+      //   @include flexCenter;
+      // }
+      // & div:nth-child(1) {
+      //   transform: rotate(55deg);
+      // }
+      // & div:nth-child(2) {
+      //   transform: rotate(-55deg);
+      // }
     }
   }
 
   &-info {
+    
     display: flex;
     flex-direction: column;
     gap: 5px;
 
     &__text {
       font-family: $MaR;
-      font-size: 21px;
-      line-height: 34px;
+      font-size: 20px;
+      line-height: 24px;
       color: $white;
     }
     &__inp {
-      max-width: 300px;
+      max-width: 500px;
       width: 100%;
       // margin: 0 20px;
       padding: 5px;
       border: none;
       border-radius: 5px;
       font-family: $MaR;
-      font-size: 20px;
-      line-height: 25px;
-      // color: $dark;
+      font-size: 16px;
+      line-height: 150%;
+      color: $lightGrey;
       outline: none;
     }
   }
