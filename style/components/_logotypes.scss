@@ -1,0 +1,6 @@
+.logotypes {
+  &-list {
+    @include flexBetween;
+    margin-bottom: 120px;
+  }
+}

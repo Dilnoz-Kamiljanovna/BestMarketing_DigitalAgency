@@ -57,11 +57,6 @@ body {
   src: url(../fonts/DMSans-Regular.ttf) format(ttf);
   font-size: 400;
 }
-.page-header {
-  height: 100vh;
-  background: url(/images/Happy_girls.png);
-}
-
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -147,6 +142,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   transform: translateY(-100%);
+  z-index: 1;
 }
 .form.open {
   transform: translateY(0%);
@@ -227,6 +223,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-block: 77px 109px;
 }
 .header-banner__info {
   max-width: 607px;
@@ -286,6 +283,16 @@ body {
   max-width: 599px;
   width: 100%;
 }
+.header-banner__content_project {
+  position: absolute;
+  left: 400px;
+  top: 12px;
+}
+.header-banner__content_client {
+  position: absolute;
+  left: 400px;
+  top: 355px;
+}
 
 .banner-btn__start {
   width: 162px;
@@ -342,4 +349,11 @@ body {
 .banner-btn__watch:hover:hover {
   background: #FFFFFF;
   color: #FD695A;
+}
+
+.logotypes-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
 }/*# sourceMappingURL=main.css.map */

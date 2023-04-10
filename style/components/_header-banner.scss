@@ -1,6 +1,7 @@
 .header-banner {
   @include flexBetween;
-
+  margin-block: 77px 109px;
+  
   &__info {
     max-width: 607px;
     width: 100%;
@@ -43,7 +44,7 @@
     }
   }
   &__content {
-    // position: relative;
+    position: relative;
     &::after {
       content: url(../images/Icons.png);
       position: absolute;
@@ -64,8 +65,13 @@
 
     &_project {
       position: absolute;
-      left: -20px;
-      top: 0;
+      left: 400px;
+      top: 12px;
+    }
+    &_client {
+      position: absolute;
+      left: 400px;
+    top: 355px;
     }
   }
 }
