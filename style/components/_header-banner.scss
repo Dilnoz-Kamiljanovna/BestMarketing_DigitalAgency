@@ -12,7 +12,18 @@
       text-transform: capitalize;
       color: $grey;
       & span {
+        // background-image: url(../images/Rec-Marketing.png);
         color: $orange;
+        position: relative;
+
+        &::after {
+          content: url(../images/Rec-Marketing.png);
+          position: absolute;
+          top: -7px;
+          right: 20px;
+          // max-width: 380px;
+          width: 100%;
+        }
       }
     }
     &_text {
@@ -29,28 +40,69 @@
       display: flex;
       align-items: center;
       gap: 38px;
-      & button {
-        width: 162px;
-        height: 59px;
-        @include btn;
-        font-family: $MuB;
-        font-size: 18px;
-        line-height: 28px;
-        text-transform: capitalize;
-      }
-      & a {
-        @include flexBetween;
-        gap: 16px;
-        & div {
-            background: $white;
-            & img {
-                width: 16px;
-                margin: 15px 17px;
-                // background: $white;
-            }
-        }
+    }
+  }
+  &__content {
+    // position: relative;
+    &::after {
+      content: url(../images/Icons.png);
+      position: absolute;
+      width: 100%;
+      left: 110px;
+      top: 17px;
+    }
+    &::before {
+      content: url(../images/img_ExpertTeamMembers.png);
+      position: absolute;
+      left: -147px;
+      top: 257px;
+    }
+    &_img {
+      max-width: 599px;
+      width: 100%;
+    }
 
-      }
+    &_project {
+      position: absolute;
+      left: -20px;
+      top: 0;
+    }
+  }
+}
+
+.banner-btn {
+  &__start {
+    width: 162px;
+    height: 59px;
+    @include btn;
+    font-family: $MuB;
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: capitalize;
+  }
+  &__watch {
+    @include flexBetween;
+    gap: 16px;
+    background: transparent;
+    border: solid 2px transparent;
+    border-radius: 50px;
+    padding-right: 16px;
+    color: $orange;
+    font-family: $MuR;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.4s;
+    & div {
+      width: 49px;
+      height: 49px;
+      background: $white;
+      border-radius: 50%;
+      @include flexCenter;
+    }
+    &:hover {
+      @include btn;
     }
   }
 }

@@ -6,7 +6,7 @@
 }
 
 body {
-  background: rgba(255, 255, 255, 0.6980392157);
+  background: antiquewhite;
 }
 
 * {
@@ -19,42 +19,42 @@ body {
 
 @font-face {
   font-family: "Mulish-ExtraBold";
-  src: url(/fonts/Mulish-ExtraBold.ttf) format(ttf);
+  src: url(../fonts/Mulish-ExtraBold.ttf) format(ttf);
   font-size: 800;
 }
 @font-face {
   font-family: "Mulish-Bold";
-  src: url(/fonts/Mulish-Bold.ttf) format(ttf);
+  src: url(../fonts/Mulish-Bold.ttf) format(ttf);
   font-size: 700;
 }
 @font-face {
   font-family: "Mulish-SemiBold";
-  src: url(/fonts/Mulish-SemiBold.ttf) format(ttf);
+  src: url(../fonts/Mulish-SemiBold.ttf) format(ttf);
   font-size: 600;
 }
 @font-face {
   font-family: "Mulish-Regular";
-  src: url(/fonts/Mulish-Regular.ttf) format(ttf);
+  src: url(../fonts/Mulish-Regular.ttf) format(ttf);
   font-size: 400;
 }
 @font-face {
   font-family: "Manrope-SemiBold";
-  src: url(/fonts/Manrope-SemiBold.ttf) format(ttf);
+  src: url(../fonts/Manrope-SemiBold.ttf) format(ttf);
   font-size: 600;
 }
 @font-face {
   font-family: "Manrope-Regular";
-  src: url(/fonts/Manrope-Regular.ttf) format(ttf);
+  src: url(../fonts/Manrope-Regular.ttf) format(ttf);
   font-size: 400;
 }
 @font-face {
   font-family: "DMSans Medium";
-  src: url(/fonts/DMSans-Medium.ttf) format(ttf);
+  src: url(../fonts/DMSans-Medium.ttf) format(ttf);
   font-size: 500;
 }
 @font-face {
   font-family: "DMSans Regular";
-  src: url(/fonts/DMSans-Regular.ttf) format(ttf);
+  src: url(../fonts/DMSans-Regular.ttf) format(ttf);
   font-size: 400;
 }
 .page-header {
@@ -121,17 +121,14 @@ body {
   z-index: 1;
 }
 .header .burger-menu {
-  background: red;
-  width: 25px;
-  height: 2px;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
 }
 .header .burger-menu div {
-  width: 100%;
+  width: 30px;
   height: 3px;
-  background-color: #150A29;
+  background: #FD695A;
 }
 
 .form {
@@ -174,13 +171,14 @@ body {
   height: 30px;
   border-radius: 50%;
   border: none;
+  transition: 0.5s;
+}
+.form-head button:hover {
+  width: 35px;
+  height: 35px;
 }
 .form-head button i {
   color: #FD695A;
-}
-.form-head button i .hidden {
-  transform: translateX(-50%);
-  transform: translateY(-100%);
 }
 .form-info {
   display: flex;
@@ -244,6 +242,14 @@ body {
 }
 .header-banner__info_title span {
   color: #FD695A;
+  position: relative;
+}
+.header-banner__info_title span::after {
+  content: url(../images/Rec-Marketing.png);
+  position: absolute;
+  top: -7px;
+  right: 20px;
+  width: 100%;
 }
 .header-banner__info_text {
   max-width: 464px;
@@ -260,7 +266,28 @@ body {
   align-items: center;
   gap: 38px;
 }
-.header-banner__info_items button {
+.header-banner__content {
+  position: relative;
+}
+.header-banner__content::after {
+  content: url(../images/Icons.png);
+  position: absolute;
+  width: 100%;
+  left: 110px;
+  top: 17px;
+}
+.header-banner__content::before {
+  content: url(../images/img_ExpertTeamMembers.png);
+  position: absolute;
+  left: -147px;
+  top: 257px;
+}
+.header-banner__content_img {
+  max-width: 599px;
+  width: 100%;
+}
+
+.banner-btn__start {
   width: 162px;
   height: 59px;
   border-radius: 50px;
@@ -274,20 +301,45 @@ body {
   line-height: 28px;
   text-transform: capitalize;
 }
-.header-banner__info_items button:hover {
+.banner-btn__start:hover {
   background: #FFFFFF;
   color: #FD695A;
 }
-.header-banner__info_items a {
+.banner-btn__watch {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  background: transparent;
+  border: solid 2px transparent;
+  border-radius: 50px;
+  padding-right: 16px;
+  color: #FD695A;
+  font-family: "Mulish-Regular";
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.4s;
 }
-.header-banner__info_items a div {
+.banner-btn__watch div {
+  width: 49px;
+  height: 49px;
   background: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.header-banner__info_items a div img {
-  width: 16px;
-  margin: 15px 17px;
+.banner-btn__watch:hover {
+  border-radius: 50px;
+  background: #FD695A;
+  color: #FFFFFF;
+  border: solid 2px #FD695A;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.banner-btn__watch:hover:hover {
+  background: #FFFFFF;
+  color: #FD695A;
 }/*# sourceMappingURL=main.css.map */

@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Proxylab</title>
+    <title>ProxyLab</title>
   </head>
   <body>
     <header class="page-header">
@@ -77,35 +77,47 @@
               Various versions have evolved over the years, sometimes by
               accident, sometimes on purpose
             </p>
-            <div class="header-banner__info_items">
-              <button>get started</button>
-              <a href="#">
+            <div class="header-banner__info_items banner-btn">
+              <button class="banner-btn__start">get started</button>
+              <button class="banner-btn__watch">
                 <div><img src="images/Vector_play.svg" alt="" /></div>
-                <span>watch video</span>
-              </a>
+                watch video
+              </button>
             </div>
           </div>
-          <img src="images/Happy_girls.png" alt="" class="header-banner__img" />
+          <div class="header-banner__content">
+            <img
+              src="images/Happy_girls.png"
+              alt=""
+              class="header-banner__content_img"
+            />
+            <img
+              src="images/banner-imgProject.png"
+              alt=""
+              class="header-banner__content_project"
+            />
+            <img
+              src="images/banner-imgClient.png"
+              alt=""
+              class="header-banner__content_client"
+            />
+          </div>
         </div>
-        <button
-          style="
-            border: none;
-            background: white;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-          "
-        >
-          <img
-            src="images/Vector_play.svg"
-            alt=""
-            style="padding: 15px; background: antiquewhite; border-radius: 50%"
-          />
-          Watch Video
-        </button>
       </div>
     </header>
+    <main class="page_main">
+      <section class="logotips container">
+       
+          <ul class="logotips-list">
+            <li class="logotips-list__item"><a href="!#" class="logotips-list__link"><img src="images/Slack (logo — Colour).svg" alt=""></a></li>
+            <li class="logotips-list__item"><a href="!#" class="logotips-list__item_link"><img src="images/Descript (logo — Colour).svg" alt=""></a></li>
+            <li class="logotips-list__item"><a href="!#" class="logotips-list__item_link"><img src="images/Etsy (logo — Colour).svg" alt=""></a></li>
+            <li class="logotips-list__item"><a href="!#" class="logotips-list__item_link"><img src="images/Spotify (logo — Colour).png" 1alt=""></a></li>
+            <li class="logotips-list__item"><a href="!#" class="logotips-list__item_link"><img src="images/Logitech (logo — Colour).svg" alt=""></a></li>
+          </ul>
+        
+      </section>
+    </main>
 
     <script src="js/app.js"></script>
   </body>

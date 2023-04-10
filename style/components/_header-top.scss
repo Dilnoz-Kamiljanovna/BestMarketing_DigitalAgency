@@ -69,16 +69,13 @@
   }
 
   .burger-menu {
-    background: red;
-    width: 25px;
-    height: 2px;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 5px;
     & div {
-      width: 100%;
+      width: 30px;
       height: 3px;
-      background-color: $dark;
+      background: $orange;
     }
   }
 }
@@ -122,12 +119,18 @@
       height: 30px;
       border-radius: 50%;
       border: none;
+      transition: 0.5s;
+      &:hover {
+        width: 35px;
+        height: 35px;
+      }
       & i {
         color: $orange;
-        & .hidden {
-          transform: translateX(-50%);
-          transform: translateY(-100%);
-        }
+
+        // & .hidden {
+        //   transform: translateX(-50%);
+        //   transform: translateY(-100%);
+        // }
       }
       // & div {
       //   width: 15px;
@@ -146,7 +149,6 @@
   }
 
   &-info {
-    
     display: flex;
     flex-direction: column;
     gap: 5px;
