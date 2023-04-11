@@ -13,7 +13,6 @@
             text-transform: capitalize;
             color: $grey;
             & span {
-                // background-image: url(../images/Rec-Marketing.png);
                 color: $orange;
                 position: relative;
 
@@ -45,22 +44,22 @@
     }
     &__content {
         position: relative;
-        &::after {
-            content: url(../images/banner-icons.png);
-            position: absolute;
-            width: 100%;
-            left: 110px;
-            top: 17px;
-        }
-        &::before {
-            content: url(../images/banner-img_ExpertTeamMembers.png);
-            position: absolute;
-            left: -147px;
-            top: 257px;
-        }
-        &_img {
+
+        &_main-img {
             max-width: 599px;
             width: 100%;
+        }
+
+        &_icons {
+            position: absolute;
+            right: 110px;
+            top: 17px;
+        }
+
+        &_members {
+            position: absolute;
+            right: -147px;
+            top: 257px;
         }
 
         &_project {
