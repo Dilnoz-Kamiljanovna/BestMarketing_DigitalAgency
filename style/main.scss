@@ -4,8 +4,7 @@
 @import "variables/font";
 @import "variables/mixins";
 
-@import "components/header-top";
-@import "components/header-banner";
-@import 'components/logotypes';
-
-
+@import 'components/header-top';
+@import 'components/header-banner';
+@import 'components/_section-logotypes';
+@import 'components/_section-service';

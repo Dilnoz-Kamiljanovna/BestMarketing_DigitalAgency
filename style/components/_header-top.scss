@@ -22,7 +22,7 @@
         line-height: 28px;
         color: $dark;
         font-family: $MaS;
-        transition: 1s;
+        transition: 0.4s;
         position: relative;
         &:hover::after {
           content: "";
@@ -161,9 +161,15 @@
     height: 50px;
     margin: 30px auto;
     @include btn;
-    background: $whiteOpacity;
+    background: $white;
+    border: solid 2px $white;
+    color: $orange;
     font-family: $MuB;
     font-size: 22px;
     line-height: 27px;
+    &:hover {
+      background: $orange;
+      color: $white;
+    }
   }
 }

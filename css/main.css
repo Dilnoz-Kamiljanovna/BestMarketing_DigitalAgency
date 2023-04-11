@@ -81,7 +81,7 @@ body {
   line-height: 28px;
   color: #150A29;
   font-family: "Manrope-SemiBold";
-  transition: 1s;
+  transition: 0.4s;
   position: relative;
 }
 .header-top__nav_link:hover::after {
@@ -209,7 +209,9 @@ body {
   border: solid 2px #FD695A;
   cursor: pointer;
   transition: 0.5s;
-  background: rgba(255, 255, 255, 0.6980392157);
+  background: #FFFFFF;
+  border: solid 2px #FFFFFF;
+  color: #FD695A;
   font-family: "Mulish-Bold";
   font-size: 22px;
   line-height: 27px;
@@ -217,6 +219,10 @@ body {
 .form-btn:hover {
   background: #FFFFFF;
   color: #FD695A;
+}
+.form-btn:hover {
+  background: #FD695A;
+  color: #FFFFFF;
 }
 
 .header-banner {
@@ -356,4 +362,61 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 120px;
+}
+
+.service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-content {
+  max-width: 523px;
+  width: 100%;
+}
+.service-content__question-title {
+  font-family: "Mulish-SemiBold";
+  font-size: 24px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #FD695A;
+}
+.service-content__answer-title {
+  margin-block: 8px 6px;
+  font-family: "Mulish-Bold";
+  font-size: 42px;
+  line-height: 50px;
+  color: #3D3D3F;
+  text-transform: capitalize;
+  position: relative;
+}
+.service-content__answer-title::before {
+  position: absolute;
+  content: url(../images/rocket.png);
+  top: 55px;
+  left: 367px;
+}
+.service-content__text {
+  width: 100%;
+  margin-block: 25px;
+  font-family: "Mulish-SemiBold";
+  font-size: 16px;
+  line-height: 26px;
+  color: #515151;
+}
+.service-content__btn {
+  width: 203px;
+  height: 50px;
+  border-radius: 50px;
+  background: #FD695A;
+  color: #FFFFFF;
+  border: solid 2px #FD695A;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Mulish-Bold";
+  font-size: 18px;
+  line-height: 28px;
+}
+.service-content__btn:hover {
+  background: #FFFFFF;
+  color: #FD695A;
 }/*# sourceMappingURL=main.css.map */
