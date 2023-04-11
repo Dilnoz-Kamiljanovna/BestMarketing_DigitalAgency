@@ -1,114 +1,114 @@
 .header-banner {
-  @include flexBetween;
-  margin-block: 77px 109px;
-  
-  &__info {
-    max-width: 607px;
-    width: 100%;
-    &_title {
-      width: 100%;
-      font-family: $MuE;
-      font-size: 70px;
-      line-height: 94px;
-      text-transform: capitalize;
-      color: $grey;
-      & span {
-        // background-image: url(../images/Rec-Marketing.png);
-        color: $orange;
-        position: relative;
+    @include flexBetween;
+    margin-block: 77px 109px;
 
-        &::after {
-          content: url(../images/Rec-Marketing.png);
-          position: absolute;
-          top: -7px;
-          right: 20px;
-          // max-width: 380px;
-          width: 100%;
+    &__info {
+        max-width: 607px;
+        width: 100%;
+        &_title {
+            width: 100%;
+            font-family: $MuE;
+            font-size: 70px;
+            line-height: 94px;
+            text-transform: capitalize;
+            color: $grey;
+            & span {
+                // background-image: url(../images/Rec-Marketing.png);
+                color: $orange;
+                position: relative;
+
+                &::after {
+                    content: url(../images/banner-Rect_Marketing.png);
+                    position: absolute;
+                    top: -7px;
+                    right: 20px;
+                    // max-width: 380px;
+                    width: 100%;
+                }
+            }
         }
-      }
+        &_text {
+            max-width: 464px;
+            width: 100%;
+            font-family: $MaR;
+            font-size: 21px;
+            line-height: 34px;
+            color: $grey;
+            opacity: 0.75;
+            margin-block: 53px 64px;
+        }
+        &_items {
+            display: flex;
+            align-items: center;
+            gap: 38px;
+        }
     }
-    &_text {
-      max-width: 464px;
-      width: 100%;
-      font-family: $MaR;
-      font-size: 21px;
-      line-height: 34px;
-      color: $grey;
-      opacity: 0.75;
-      margin-block: 53px 64px;
-    }
-    &_items {
-      display: flex;
-      align-items: center;
-      gap: 38px;
-    }
-  }
-  &__content {
-    position: relative;
-    &::after {
-      content: url(../images/Icons.png);
-      position: absolute;
-      width: 100%;
-      left: 110px;
-      top: 17px;
-    }
-    &::before {
-      content: url(../images/img_ExpertTeamMembers.png);
-      position: absolute;
-      left: -147px;
-      top: 257px;
-    }
-    &_img {
-      max-width: 599px;
-      width: 100%;
-    }
+    &__content {
+        position: relative;
+        &::after {
+            content: url(../images/banner-icons.png);
+            position: absolute;
+            width: 100%;
+            left: 110px;
+            top: 17px;
+        }
+        &::before {
+            content: url(../images/banner-img_ExpertTeamMembers.png);
+            position: absolute;
+            left: -147px;
+            top: 257px;
+        }
+        &_img {
+            max-width: 599px;
+            width: 100%;
+        }
 
-    &_project {
-      position: absolute;
-      left: 400px;
-      top: 12px;
+        &_project {
+            position: absolute;
+            left: 400px;
+            top: 12px;
+        }
+        &_client {
+            position: absolute;
+            left: 400px;
+            top: 355px;
+        }
     }
-    &_client {
-      position: absolute;
-      left: 400px;
-    top: 355px;
-    }
-  }
 }
 
 .banner-btn {
-  &__start {
-    width: 162px;
-    height: 59px;
-    @include btn;
-    font-family: $MuB;
-    font-size: 18px;
-    line-height: 28px;
-    text-transform: capitalize;
-  }
-  &__watch {
-    @include flexBetween;
-    gap: 16px;
-    background: transparent;
-    border: solid 2px transparent;
-    border-radius: 50px;
-    padding-right: 16px;
-    color: $orange;
-    font-family: $MuR;
-    font-size: 18px;
-    line-height: 23px;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition: 0.4s;
-    & div {
-      width: 49px;
-      height: 49px;
-      background: $white;
-      border-radius: 50%;
-      @include flexCenter;
+    &__start {
+        width: 162px;
+        height: 59px;
+        @include btn;
+        font-family: $MuB;
+        font-size: 18px;
+        line-height: 28px;
+        text-transform: capitalize;
     }
-    &:hover {
-      @include btn;
+    &__watch {
+        @include flexBetween;
+        gap: 16px;
+        background: transparent;
+        border: solid 2px transparent;
+        border-radius: 50px;
+        padding-right: 16px;
+        color: $orange;
+        font-family: $MuR;
+        font-size: 18px;
+        line-height: 23px;
+        text-transform: capitalize;
+        cursor: pointer;
+        transition: 0.4s;
+        & div {
+            width: 49px;
+            height: 49px;
+            background: $white;
+            border-radius: 50%;
+            @include flexCenter;
+        }
+        &:hover {
+            @include btn;
+        }
     }
-  }
 }
