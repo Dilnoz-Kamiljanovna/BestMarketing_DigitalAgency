@@ -4,13 +4,6 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
         <link rel="stylesheet" href="css/main.css" />
         <title>ProxyLab</title>
     </head>
@@ -42,42 +35,45 @@
                         <div></div>
                         <div></div>
                     </div>
+
                     <button class="header-top__btn">contact us</button>
                 </div>
 
                 <!-- MODAL WINDOW -->
 
                 <div class="modal">
-                    <form class="modal-window">
+                    <div class="modal-window">
                         <div class="modal-window__content">
-                            <img src="./images/Logo-Proxylab.svg" alt="" />
-                            <a href="!#" class="modal-window__content_close"
-                                >X</a
-                            >
-                            <div class="modal-window__content_info">
-                                <label for="name">Enter your name:</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    placeholder="Name"
-                                />
+                            <div class="modal-window__content_head">
+                                <img src="./images/Logo-Proxylab.svg" alt="" />
+                                <a href="!#">X</a>
                             </div>
-                            <div class="modal-window__content_info">
-                                <label for="email">Enter your email:</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    placeholder="Email"
-                                />
-                            </div>
-                            <button
-                                type="submit"
-                                class="modal-window__content_btn"
-                            >
-                                Send
-                            </button>
+                            <form class="modal-window__content_body">
+                                <div class="modal-window__content_body-info">
+                                    <label for="name">Enter your name:</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        placeholder="Name"
+                                    />
+                                </div>
+                                <div class="modal-window__content_body-info">
+                                    <label for="email">Enter your email:</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        placeholder="Email"
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    class="modal-window__content_body-btn"
+                                >
+                                    Send
+                                </button>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
 
                 <!-- HEADER-BANNER -->
@@ -184,6 +180,7 @@
 
                     <div class="service-content__items"></div>
                 </div>
+                <div class="test"></div>
             </section>
         </main>
 
