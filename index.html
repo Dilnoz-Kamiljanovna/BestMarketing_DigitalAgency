@@ -47,37 +47,38 @@
 
                 <!-- MODAL WINDOW -->
 
-                <form class="form">
-                    <div class="form-head">
-                        <img src="./images/Logo-Proxylab.svg" alt="" />
-                        <button class="btn close-btn">
-                            <i class="fas fa-close" id="close"></i>
-                        </button>
-                    </div>
-                    <div class="form-info">
-                        <label for="name" class="form-info__text"
-                            >Enter your name:</label
-                        >
-                        <input
-                            type="text"
-                            id="name"
-                            class="form-info__inp"
-                            placeholder="Name"
-                        />
-                    </div>
-                    <div class="form-info">
-                        <label for="email" class="form-info__text"
-                            >Enter your email:</label
-                        >
-                        <input
-                            type="email"
-                            id="email"
-                            class="form-info__inp"
-                            placeholder="Email"
-                        />
-                    </div>
-                    <button type="submit" class="form-btn">Send</button>
-                </form>
+                <div class="modal">
+                    <form class="modal-window">
+                        <div class="modal-window__content">
+                            <img src="./images/Logo-Proxylab.svg" alt="" />
+                            <a href="!#" class="modal-window__content_close"
+                                >X</a
+                            >
+                            <div class="modal-window__content_info">
+                                <label for="name">Enter your name:</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="Name"
+                                />
+                            </div>
+                            <div class="modal-window__content_info">
+                                <label for="email">Enter your email:</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Email"
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                class="modal-window__content_btn"
+                            >
+                                Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
                 <!-- HEADER-BANNER -->
 

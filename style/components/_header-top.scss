@@ -1,175 +1,156 @@
 .header {
-  &-top {
-    @include flexBetween;
-    padding-top: 39px;
-    text-transform: capitalize;
-    &__link {
-      width: 189px;
-      // height: 40px;
-      &_logo {
-        width: 100%;
-      }
-    }
-
-    &__nav {
-      // max-width: 466px;
-      // width: 100%;
-      @include flexBetween;
-      gap: 52px;
-      &_link {
-        // display: block;
-        font-size: 16px;
-        line-height: 28px;
-        color: $dark;
-        font-family: $MaS;
-        transition: 0.4s;
-        position: relative;
-        &:hover::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 14px;
-          width: 10px;
-          height: 2px;
-          color: $orange;
-          // text-decoration: underline;
+    &-top {
+        @include flexBetween;
+        padding-top: 39px;
+        text-transform: capitalize;
+        &__link {
+            width: 189px;
+            // height: 40px;
+            &_logo {
+                width: 100%;
+            }
         }
-      }
+
+        &__nav {
+            // max-width: 466px;
+            // width: 100%;
+            @include flexBetween;
+            gap: 52px;
+            &_link {
+                // display: block;
+                font-size: 16px;
+                line-height: 28px;
+                color: $dark;
+                font-family: $MaS;
+                transition: 0.4s;
+                position: relative;
+                &:hover::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 14px;
+                    width: 10px;
+                    height: 2px;
+                    color: $orange;
+                    // text-decoration: underline;
+                }
+            }
+        }
+
+        &__btn {
+            width: 137px;
+            height: 50px;
+            text-transform: capitalize;
+            @include btn;
+            font-size: 16px;
+            line-height: 28px;
+            font-family: $MuS;
+            &:active .form {
+                opacity: 1;
+                z-index: 1;
+            }
+        }
     }
 
-    &__btn {
-      width: 137px;
-      height: 50px;
-      text-transform: capitalize;
-      @include btn;
-      font-size: 16px;
-      line-height: 28px;
-      font-family: $MuS;
-      &:active .form {
-        opacity: 1;
-        z-index: 1;
-      }
+    .burger-menu {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        & div {
+            width: 30px;
+            height: 3px;
+            background: $orange;
+        }
     }
-  }
-
-  .burger-menu {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    & div {
-      width: 30px;
-      height: 3px;
-      background: $orange;
-    }
-  }
 }
 
-.form {
-  max-width: 500px;
-  width: 100%;
-  margin: auto;
-  padding: 25px;
-  background: $orange;
-  border: solid 3px $white;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  transform: translateY(-100%);
-  z-index: 1;
+///    MODAL WINDOW   ///
 
-  &.open {
-    transform: translateY(0%);
-    transform: translateX(-50%);
-  }
-  &-head {
-    @include flexBetween;
-    padding-bottom: 20px;
-    & img {
-      width: 120px;
-      margin: 0;
-      padding: 7px;
-      background: $whiteOpacity;
-      border-radius: 10px;
-      color: $white;
-    }
-    & button {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      border: none;
-      transition: 0.5s;
-      &:hover {
-        width: 35px;
-        height: 35px;
-      }
-      & i {
-        color: $orange;
-
-        // & .hidden {
-        //   transform: translateX(-50%);
-        //   transform: translateY(-100%);
-        // }
-      }
-      // & div {
-      //   width: 15px;
-      //   height: 2px;
-      //   margin: auto;
-      //   background: $orange;
-      //   @include flexCenter;
-      // }
-      // & div:nth-child(1) {
-      //   transform: rotate(55deg);
-      // }
-      // & div:nth-child(2) {
-      //   transform: rotate(-55deg);
-      // }
-    }
-  }
-
-  &-info {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-
-    &__text {
-      font-family: $MaR;
-      font-size: 20px;
-      line-height: 24px;
-      color: $white;
-    }
-    &__inp {
-      max-width: 500px;
-      width: 100%;
-      // margin: 0 20px;
-      padding: 5px;
-      border: none;
-      border-radius: 5px;
-      font-family: $MaR;
-      font-size: 16px;
-      line-height: 150%;
-      color: $lightGrey;
-      outline: none;
-    }
-  }
-  &-btn {
-    width: 300px;
-    height: 50px;
-    margin: 30px auto;
-    @include btn;
-    background: $white;
-    border: solid 2px $white;
-    color: $orange;
-    font-family: $MuB;
-    font-size: 22px;
-    line-height: 27px;
-    &:hover {
-      background: $orange;
-      color: $white;
-    }
-  }
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    border: solid 4px red;
 }
+// . {
+//     max-width: 500px;
+//     width: 100%;
+//     margin: auto;
+//     padding: 25px;
+//     background: $orange;
+//     border: solid 3px $white;
+//     border-radius: 25px;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     transform: translateY(-100%);
+//     z-index: 1;
+
+//     &.open {
+//         transform: translateY(0%);
+//         transform: translateX(-50%);
+//     }
+//     &-head {
+//         @include flexBetween;
+//         padding-bottom: 20px;
+//         & img {
+//             width: 120px;
+//             margin: 0;
+//             padding: 7px;
+//             background: $whiteOpacity;
+//             border-radius: 10px;
+//             color: $white;
+//         }
+//         &__close {
+//             color: $white;
+//         }
+//     }
+
+//     &-info {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 5px;
+
+//         &__text {
+//             font-family: $MaR;
+//             font-size: 20px;
+//             line-height: 24px;
+//             color: $white;
+//         }
+//         &__inp {
+//             max-width: 500px;
+//             width: 100%;
+//             padding: 5px;
+//             border: none;
+//             border-radius: 5px;
+//             font-family: $MaR;
+//             font-size: 16px;
+//             line-height: 150%;
+//             color: $lightGrey;
+//             outline: none;
+//         }
+//     }
+//     &-btn {
+//         width: 300px;
+//         height: 50px;
+//         margin: 30px auto;
+//         @include btn;
+//         background: $white;
+//         border: solid 2px $white;
+//         color: $orange;
+//         font-family: $MuB;
+//         font-size: 22px;
+//         line-height: 27px;
+//         &:hover {
+//             background: $orange;
+//             color: $white;
+//         }
+//     }
+// }

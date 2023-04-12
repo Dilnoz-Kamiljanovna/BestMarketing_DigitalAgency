@@ -162,19 +162,8 @@ body {
   border-radius: 10px;
   color: #FFFFFF;
 }
-.form-head button {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: none;
-  transition: 0.5s;
-}
-.form-head button:hover {
-  width: 35px;
-  height: 35px;
-}
-.form-head button i {
-  color: #FD695A;
+.form-head__close {
+  color: #FFFFFF;
 }
 .form-info {
   display: flex;
@@ -248,7 +237,7 @@ body {
   position: relative;
 }
 .header-banner__info_title span::after {
-  content: url(../images/Rec-Marketing.png);
+  content: url(../images/banner-Rect_Marketing.png);
   position: absolute;
   top: -7px;
   right: 20px;
@@ -272,22 +261,19 @@ body {
 .header-banner__content {
   position: relative;
 }
-.header-banner__content::after {
-  content: url(../images/Icons.png);
-  position: absolute;
-  width: 100%;
-  left: 110px;
-  top: 17px;
-}
-.header-banner__content::before {
-  content: url(../images/img_ExpertTeamMembers.png);
-  position: absolute;
-  left: -147px;
-  top: 257px;
-}
-.header-banner__content_img {
+.header-banner__content_main-img {
   max-width: 599px;
   width: 100%;
+}
+.header-banner__content_icons {
+  position: absolute;
+  right: 110px;
+  top: 17px;
+}
+.header-banner__content_members {
+  position: absolute;
+  right: 382px;
+  top: 258px;
 }
 .header-banner__content_project {
   position: absolute;
@@ -391,7 +377,7 @@ body {
 }
 .service-content__answer-title::before {
   position: absolute;
-  content: url(../images/rocket.png);
+  content: url(../images/icon-rocket.png);
   top: 55px;
   left: 367px;
 }
