@@ -88,7 +88,7 @@ body {
 .header-top__nav_link {
   font-size: 16px;
   line-height: 28px;
-  color: #150A29;
+  color: #150a29;
   font-family: "Manrope-SemiBold";
   transition: 0.4s;
   position: relative;
@@ -100,16 +100,16 @@ body {
   top: 14px;
   width: 10px;
   height: 2px;
-  color: #FD695A;
+  color: #fd695a;
 }
 .header-top__btn {
   width: 137px;
   height: 50px;
   text-transform: capitalize;
   border-radius: 50px;
-  background: #FD695A;
-  color: #FFFFFF;
-  border: solid 2px #FD695A;
+  background: #fd695a;
+  color: #ffffff;
+  border: solid 2px #fd695a;
   cursor: pointer;
   transition: 0.5s;
   font-size: 16px;
@@ -117,8 +117,8 @@ body {
   font-family: "Mulish-SemiBold";
 }
 .header-top__btn:hover {
-  background: #FFFFFF;
-  color: #FD695A;
+  background: #ffffff;
+  color: #fd695a;
 }
 .header-top__btn:active .form {
   opacity: 1;
@@ -143,7 +143,7 @@ body {
 .header .burger-menu div {
   width: 30px;
   height: 3px;
-  background: #FD695A;
+  background: #fd695a;
 }
 
 .modal {
@@ -168,10 +168,10 @@ body {
   max-width: 500px;
   width: 100%;
   padding: 20px;
-  background: #FD695A;
+  background: #fd695a;
   border-radius: 15px;
-  border: 2px solid #FFFFFF;
-  color: #150A29;
+  border: 2px solid #ffffff;
+  color: #150a29;
 }
 .modal-window__content_head {
   display: flex;
@@ -185,14 +185,14 @@ body {
   padding: 7px;
   background: rgba(255, 255, 255, 0.6980392157);
   border-radius: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .modal-window__content_head > a {
   position: absolute;
   right: 10px;
   top: 10px;
   font-size: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .modal-window__content_body {
   max-width: 350px;
@@ -214,7 +214,7 @@ body {
   font-family: "Manrope-Regular";
   font-size: 20px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .modal-window__content_body-info > input {
   width: 100%;
@@ -230,25 +230,25 @@ body {
   height: 40px;
   margin: 30px auto;
   border-radius: 50px;
-  background: #FD695A;
-  color: #FFFFFF;
-  border: solid 2px #FD695A;
+  background: #fd695a;
+  color: #ffffff;
+  border: solid 2px #fd695a;
   cursor: pointer;
   transition: 0.5s;
-  background: #FFFFFF;
-  border: solid 2px #FFFFFF;
-  color: #FD695A;
+  background: #ffffff;
+  border: solid 2px #ffffff;
+  color: #fd695a;
   font-family: "Mulish-Bold";
   font-size: 22px;
   line-height: 27px;
 }
 .modal-window__content_body-btn:hover {
-  background: #FFFFFF;
-  color: #FD695A;
+  background: #ffffff;
+  color: #fd695a;
 }
 .modal-window__content_body-btn:hover {
-  background: #FD695A;
-  color: #FFFFFF;
+  background: #fd695a;
+  color: #ffffff;
 }
 
 .header-banner {
@@ -256,6 +256,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-block: 77px 109px;
+  padding: 0 30px;
 }
 @media only screen and (max-width: 1300px) {
   .header-banner {
@@ -277,25 +278,30 @@ body {
   font-size: 70px;
   line-height: 94px;
   text-transform: capitalize;
-  color: #3D3D3F;
+  color: #3d3d3f;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 700px) {
   .header-banner__info_title {
     font-size: 50px;
     line-height: 60px;
+    text-align: center;
   }
 }
 .header-banner__info_title span {
-  color: #FD695A;
+  color: #fd695a;
   position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 4px;
 }
 .header-banner__info_title span::after {
-  content: url(../images/banner-Rect_Marketing.png);
+  content: "";
   position: absolute;
-  top: -7px;
-  right: 20px;
+  top: 0px;
+  right: -4px;
   width: 100%;
-  z-index: -1;
+  height: 100%;
+  border: solid 3px #41ba77;
 }
 .header-banner__info_text {
   max-width: 464px;
@@ -303,7 +309,7 @@ body {
   font-family: "Manrope-Regular";
   font-size: 21px;
   line-height: 34px;
-  color: #3D3D3F;
+  color: #3d3d3f;
   opacity: 0.75;
   margin-block: 53px 64px;
 }
@@ -318,6 +324,11 @@ body {
 .header-banner__content_main-img {
   max-width: 599px;
   width: 100%;
+}
+@media only screen and (max-width: 700px) {
+  .header-banner__content_icons, .header-banner__content_members, .header-banner__content_project, .header-banner__content_client {
+    display: none;
+  }
 }
 .header-banner__content_icons {
   position: absolute;
@@ -344,9 +355,9 @@ body {
   width: 162px;
   height: 59px;
   border-radius: 50px;
-  background: #FD695A;
-  color: #FFFFFF;
-  border: solid 2px #FD695A;
+  background: #fd695a;
+  color: #ffffff;
+  border: solid 2px #fd695a;
   cursor: pointer;
   transition: 0.5s;
   font-family: "Mulish-Bold";
@@ -355,8 +366,8 @@ body {
   text-transform: capitalize;
 }
 .banner-btn__start:hover {
-  background: #FFFFFF;
-  color: #FD695A;
+  background: #ffffff;
+  color: #fd695a;
 }
 .banner-btn__watch {
   display: flex;
@@ -367,7 +378,7 @@ body {
   border: solid 2px transparent;
   border-radius: 50px;
   padding-right: 16px;
-  color: #FD695A;
+  color: #fd695a;
   font-family: "Mulish-Regular";
   font-size: 18px;
   line-height: 23px;
@@ -378,7 +389,7 @@ body {
 .banner-btn__watch > div {
   width: 49px;
   height: 49px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -386,19 +397,19 @@ body {
   transition: 0.5s;
 }
 .banner-btn__watch > div > svg {
-  stroke: #FD695A;
+  stroke: #fd695a;
 }
 .banner-btn__watch:hover {
   border-radius: 50px;
-  background: #FD695A;
-  color: #FFFFFF;
-  border: solid 2px #FD695A;
+  background: #fd695a;
+  color: #ffffff;
+  border: solid 2px #fd695a;
   cursor: pointer;
   transition: 0.5s;
 }
 .banner-btn__watch:hover:hover {
-  background: #FFFFFF;
-  color: #FD695A;
+  background: #ffffff;
+  color: #fd695a;
 }
 .banner-btn__watch:hover > div > svg > path {
   fill: none;
@@ -424,14 +435,14 @@ body {
   font-size: 24px;
   line-height: 50px;
   text-transform: uppercase;
-  color: #FD695A;
+  color: #fd695a;
 }
 .service-content__answer-title {
   margin-block: 8px 6px;
   font-family: "Mulish-Bold";
   font-size: 42px;
   line-height: 50px;
-  color: #3D3D3F;
+  color: #3d3d3f;
   text-transform: capitalize;
   position: relative;
 }
@@ -453,9 +464,9 @@ body {
   width: 203px;
   height: 50px;
   border-radius: 50px;
-  background: #FD695A;
-  color: #FFFFFF;
-  border: solid 2px #FD695A;
+  background: #fd695a;
+  color: #ffffff;
+  border: solid 2px #fd695a;
   cursor: pointer;
   transition: 0.5s;
   font-family: "Mulish-Bold";
@@ -463,6 +474,6 @@ body {
   line-height: 28px;
 }
 .service-content__btn:hover {
-  background: #FFFFFF;
-  color: #FD695A;
+  background: #ffffff;
+  color: #fd695a;
 }/*# sourceMappingURL=main.css.map */
