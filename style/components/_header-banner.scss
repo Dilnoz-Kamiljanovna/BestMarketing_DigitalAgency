@@ -2,9 +2,18 @@
     @include flexBetween;
     margin-block: 77px 109px;
 
+    @include mediaMobileFirst(1300) {
+        flex-direction: column;
+    }
+
     &__info {
         max-width: 607px;
         width: 100%;
+
+        @include mediaMobileFirst(1300) {
+            margin: auto;
+        }
+
         &_title {
             width: 100%;
             font-family: $MuE;
@@ -12,6 +21,12 @@
             line-height: 94px;
             text-transform: capitalize;
             color: $grey;
+
+            @include mediaMobileFirst(550) {
+                font-size: 50px;
+                line-height: 60px;
+            }
+
             & span {
                 color: $orange;
                 position: relative;
@@ -52,7 +67,7 @@
 
         &_icons {
             position: absolute;
-            right: 110px;
+            right: 45px;
             top: 17px;
         }
 
@@ -99,15 +114,24 @@
         text-transform: capitalize;
         cursor: pointer;
         transition: 0.4s;
-        & div {
+        & > div {
             width: 49px;
             height: 49px;
             background: $white;
             border-radius: 50%;
             @include flexCenter;
+            transition: 0.5s;
+
+            & > svg {
+                stroke: $orange;
+            }
         }
         &:hover {
             @include btn;
+
+            & > div > svg > path {
+                fill: none;
+            }
         }
     }
 }

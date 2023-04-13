@@ -3,8 +3,10 @@
 @import "./variables/variable";
 @import "./variables/font";
 @import "./variables/mixins";
+@import "./variables/media-mixins";
 
 @import "./components/header-top";
+@import "./components/modal-window";
 @import "./components/header-banner";
 @import "./components/section-logotypes";
 @import "./components/section-service";

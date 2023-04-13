@@ -80,6 +80,11 @@ body {
   align-items: center;
   gap: 52px;
 }
+@media only screen and (max-width: 900px) {
+  .header-top__nav {
+    gap: 45px;
+  }
+}
 .header-top__nav_link {
   font-size: 16px;
   line-height: 28px;
@@ -119,10 +124,21 @@ body {
   opacity: 1;
   z-index: 1;
 }
+@media only screen and (max-width: 800px) {
+  .header-top__nav, .header-top__btn {
+    display: none;
+  }
+}
 .header .burger-menu {
   display: none;
   flex-direction: column;
   gap: 5px;
+}
+@media only screen and (max-width: 800px) {
+  .header .burger-menu {
+    display: flex;
+    gap: 5px;
+  }
 }
 .header .burger-menu div {
   width: 30px;
@@ -138,6 +154,8 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
+  opacity: 0;
+  visibility: hidden;
 }
 .modal-window {
   min-height: 100%;
@@ -159,8 +177,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
-.modal-window__content_head img {
+.modal-window__content_head > img {
   width: 120px;
   margin: 0;
   padding: 7px;
@@ -168,7 +187,11 @@ body {
   border-radius: 10px;
   color: #FFFFFF;
 }
-.modal-window__content_head a {
+.modal-window__content_head > a {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 15px;
   color: #FFFFFF;
 }
 .modal-window__content_body {
@@ -187,14 +210,15 @@ body {
   flex-direction: column;
   gap: 5px;
 }
-.modal-window__content_body-info label {
+.modal-window__content_body-info > label {
   font-family: "Manrope-Regular";
   font-size: 20px;
   line-height: 24px;
   color: #FFFFFF;
 }
-.modal-window__content_body-info input {
+.modal-window__content_body-info > input {
   width: 100%;
+  height: 35px;
   padding: 5px;
   outline: none;
   border: none;
@@ -203,7 +227,7 @@ body {
 .modal-window__content_body-btn {
   width: 300px;
   width: 100%;
-  height: 50px;
+  height: 40px;
   margin: 30px auto;
   border-radius: 50px;
   background: #FD695A;
@@ -233,9 +257,19 @@ body {
   align-items: center;
   margin-block: 77px 109px;
 }
+@media only screen and (max-width: 1300px) {
+  .header-banner {
+    flex-direction: column;
+  }
+}
 .header-banner__info {
   max-width: 607px;
   width: 100%;
+}
+@media only screen and (max-width: 1300px) {
+  .header-banner__info {
+    margin: auto;
+  }
 }
 .header-banner__info_title {
   width: 100%;
@@ -244,6 +278,12 @@ body {
   line-height: 94px;
   text-transform: capitalize;
   color: #3D3D3F;
+}
+@media only screen and (max-width: 550px) {
+  .header-banner__info_title {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 .header-banner__info_title span {
   color: #FD695A;
@@ -281,7 +321,7 @@ body {
 }
 .header-banner__content_icons {
   position: absolute;
-  right: 110px;
+  right: 45px;
   top: 17px;
 }
 .header-banner__content_members {
@@ -335,7 +375,7 @@ body {
   cursor: pointer;
   transition: 0.4s;
 }
-.banner-btn__watch div {
+.banner-btn__watch > div {
   width: 49px;
   height: 49px;
   background: #FFFFFF;
@@ -343,6 +383,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
+}
+.banner-btn__watch > div > svg {
+  stroke: #FD695A;
 }
 .banner-btn__watch:hover {
   border-radius: 50px;
@@ -355,6 +399,9 @@ body {
 .banner-btn__watch:hover:hover {
   background: #FFFFFF;
   color: #FD695A;
+}
+.banner-btn__watch:hover > div > svg > path {
+  fill: none;
 }
 
 .logotypes-list {
