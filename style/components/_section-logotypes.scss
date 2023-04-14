@@ -1,6 +1,14 @@
 .logotypes {
-  &-list {
-    @include flexBetween;
-    margin-bottom: 120px;
-  }
+    width: 100%;
+   
+    
+    &-list {
+      @include flexBetween;
+      margin-bottom: 120px;
+      margin: 0 20px;
+      
+      @include mediaMobileFirst(993) {
+          flex-wrap: wrap;
+      }
+    }
 }

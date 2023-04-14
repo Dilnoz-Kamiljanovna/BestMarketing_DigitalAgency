@@ -258,18 +258,26 @@ body {
   margin-block: 77px 109px;
   padding: 0 30px;
 }
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 993px) {
   .header-banner {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 15px;
   }
 }
 .header-banner__info {
   max-width: 607px;
   width: 100%;
 }
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1100px) {
   .header-banner__info {
-    margin: auto;
+    max-width: 400px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 993px) {
+  .header-banner__info {
+    max-width: 100%;
+    text-align: center;
   }
 }
 .header-banner__info_title {
@@ -280,11 +288,23 @@ body {
   text-transform: capitalize;
   color: #3d3d3f;
 }
+@media only screen and (max-width: 1100px) {
+  .header-banner__info_title {
+    font-size: 50px;
+    line-height: 80px;
+  }
+}
 @media only screen and (max-width: 700px) {
   .header-banner__info_title {
     font-size: 50px;
     line-height: 60px;
     text-align: center;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .header-banner__info_title {
+    font-size: 30px;
+    line-height: 45px;
   }
 }
 .header-banner__info_title span {
@@ -313,10 +333,29 @@ body {
   opacity: 0.75;
   margin-block: 53px 64px;
 }
+@media only screen and (max-width: 993px) {
+  .header-banner__info_text {
+    margin-block: 25px 30px;
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .header-banner__info_text {
+    margin-block: 15px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
 .header-banner__info_items {
   display: flex;
   align-items: center;
   gap: 38px;
+}
+@media only screen and (max-width: 500px) {
+  .header-banner__info_items {
+    gap: 10px;
+  }
 }
 .header-banner__content {
   position: relative;
@@ -325,7 +364,7 @@ body {
   max-width: 599px;
   width: 100%;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1300px) {
   .header-banner__content_icons, .header-banner__content_members, .header-banner__content_project, .header-banner__content_client {
     display: none;
   }
@@ -351,6 +390,18 @@ body {
   top: 355px;
 }
 
+@media only screen and (max-width: 993px) {
+  .banner-btn {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .banner-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .banner-btn__start {
   width: 162px;
   height: 59px;
@@ -368,6 +419,13 @@ body {
 .banner-btn__start:hover {
   background: #ffffff;
   color: #fd695a;
+}
+@media only screen and (max-width: 500px) {
+  .banner-btn__start {
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+  }
 }
 .banner-btn__watch {
   display: flex;
@@ -396,10 +454,19 @@ body {
   align-items: center;
   transition: 0.5s;
 }
+@media only screen and (max-width: 500px) {
+  .banner-btn__watch > div {
+    width: 35px;
+    height: 35px;
+  }
+}
 .banner-btn__watch > div > svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   stroke: #fd695a;
 }
-.banner-btn__watch:hover {
+.banner-btn__watch > div:hover {
   border-radius: 50px;
   background: #fd695a;
   color: #ffffff;
@@ -407,19 +474,40 @@ body {
   cursor: pointer;
   transition: 0.5s;
 }
-.banner-btn__watch:hover:hover {
+.banner-btn__watch > div:hover:hover {
   background: #ffffff;
   color: #fd695a;
 }
-.banner-btn__watch:hover > div > svg > path {
+.banner-btn__watch > div:hover > div > svg > path {
   fill: none;
 }
+@media only screen and (max-width: 500px) {
+  .banner-btn__watch > div {
+    padding: 0 5px;
+    font-size: 14px;
+    gap: 5px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .banner-btn__watch > div {
+    font-size: 11px;
+  }
+}
 
+.logotypes {
+  width: 100%;
+}
 .logotypes-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 120px;
+  margin: 0 20px;
+}
+@media only screen and (max-width: 993px) {
+  .logotypes-list {
+    flex-wrap: wrap;
+  }
 }
 
 .service {

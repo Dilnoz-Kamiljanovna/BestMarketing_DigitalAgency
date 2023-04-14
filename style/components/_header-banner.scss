@@ -3,16 +3,23 @@
     margin-block: 77px 109px;
     padding: 0 30px;
 
-    @include mediaMobileFirst(1300) {
-        flex-direction: column;
+    @include mediaMobileFirst(993) {
+        flex-direction: column-reverse;
+        gap: 15px;
     }
 
     &__info {
         max-width: 607px;
         width: 100%;
 
-        @include mediaMobileFirst(1300) {
-            margin: auto;
+        @include mediaMobileFirst(1100) {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        @include mediaMobileFirst(993) {
+            max-width: 100%;
+            text-align: center;
         }
 
         &_title {
@@ -23,10 +30,20 @@
             text-transform: capitalize;
             color: $grey;
 
+            @include mediaMobileFirst(1100) {
+                font-size: 50px;
+                line-height: 80px;
+            }
+
             @include mediaMobileFirst(700) {
                 font-size: 50px;
                 line-height: 60px;
                 text-align: center;
+            }
+
+            @include mediaMobileFirst(400) {
+                font-size: 30px;
+                line-height: 45px;
             }
 
             & span {
@@ -56,11 +73,26 @@
             color: $grey;
             opacity: 0.75;
             margin-block: 53px 64px;
+
+            @include mediaMobileFirst(993) {
+                margin-block: 25px 30px;
+                text-align: center;
+                margin-inline: auto;
+            }
+
+            @include mediaMobileFirst(400) {
+                margin-block: 15px;
+                font-size: 15px;
+                line-height: 20px;
+            }
         }
         &_items {
             display: flex;
             align-items: center;
             gap: 38px;
+            @include mediaMobileFirst(500) {
+                gap: 10px;
+            }
         }
     }
     &__content {
@@ -74,7 +106,7 @@
         &_members,
         &_project,
         &_client {
-            @include mediaMobileFirst(700) {
+            @include mediaMobileFirst(1300) {
                 display: none;
             }
         }
@@ -105,6 +137,13 @@
 }
 
 .banner-btn {
+    @include mediaMobileFirst(993) {
+        justify-content: center;
+    }
+    @include mediaMobileFirst(500) {
+        @include flexCenter;
+    }
+
     &__start {
         width: 162px;
         height: 59px;
@@ -113,6 +152,12 @@
         font-size: 18px;
         line-height: 28px;
         text-transform: capitalize;
+
+        @include mediaMobileFirst(500) {
+            width: 100px;
+            height: 35px;
+            font-size: 12px;
+        }
     }
     &__watch {
         @include flexBetween;
@@ -136,15 +181,31 @@
             @include flexCenter;
             transition: 0.5s;
 
+            @include mediaMobileFirst(500) {
+                width: 35px;
+                height: 35px;
+            }
+
             & > svg {
+                @include flexCenter;
                 stroke: $orange;
             }
-        }
-        &:hover {
-            @include btn;
+            &:hover {
+                @include btn;
 
-            & > div > svg > path {
-                fill: none;
+                & > div > svg > path {
+                    fill: none;
+                }
+            }
+
+            @include mediaMobileFirst(500) {
+                padding: 0 5px;
+                font-size: 14px;
+                gap: 5px;
+            }
+
+            @include mediaMobileFirst(340) {
+                font-size: 11px;
             }
         }
     }
