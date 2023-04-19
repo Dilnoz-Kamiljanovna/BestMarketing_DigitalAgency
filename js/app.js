@@ -10,4 +10,7 @@ btn.addEventListener('click', ()=>{
     modalWindow.classList.add("hidden")
 })
 
+if (condition) {
+    
+}
 

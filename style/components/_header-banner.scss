@@ -161,7 +161,7 @@
     }
     &__watch {
         @include flexBetween;
-        gap: 16px;
+                gap: 16px;
         background: transparent;
         border: solid 2px transparent;
         border-radius: 50px;
@@ -173,6 +173,15 @@
         text-transform: capitalize;
         cursor: pointer;
         transition: 0.4s;
+
+        &:hover {
+            @include btn;
+
+            & > div > svg > path {
+                fill: none;
+            }
+        }
+        
         & > div {
             width: 49px;
             height: 49px;
@@ -190,13 +199,7 @@
                 @include flexCenter;
                 stroke: $orange;
             }
-            &:hover {
-                @include btn;
-
-                & > div > svg > path {
-                    fill: none;
-                }
-            }
+           
 
             @include mediaMobileFirst(500) {
                 padding: 0 5px;
