@@ -519,18 +519,18 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.service-content__wrap {
+.service-content__grid {
   max-width: 523px;
   width: 100%;
 }
-.service-content__wrap_question-title {
+.service-content__grid_question-title {
   font-family: "Mulish-SemiBold";
   font-size: 24px;
   line-height: 50px;
   text-transform: uppercase;
   color: #fd695a;
 }
-.service-content__wrap_answer-title {
+.service-content__grid_answer-title {
   margin-block: 8px 6px;
   font-family: "Mulish-Bold";
   font-size: 42px;
@@ -539,13 +539,13 @@ body {
   text-transform: capitalize;
   position: relative;
 }
-.service-content__wrap_answer-title::before {
+.service-content__grid_answer-title::before {
   position: absolute;
   content: url(../images/icon-rocket.png);
   top: 55px;
   left: 367px;
 }
-.service-content__wrap_text {
+.service-content__grid_text {
   width: 100%;
   margin-block: 25px;
   font-family: "Mulish-SemiBold";
@@ -553,7 +553,7 @@ body {
   line-height: 26px;
   color: #515151;
 }
-.service-content__wrap_btn {
+.service-content__grid_btn {
   width: 203px;
   height: 50px;
   border-radius: 50px;
@@ -566,12 +566,31 @@ body {
   font-size: 18px;
   line-height: 28px;
 }
-.service-content__wrap_btn:hover {
+.service-content__grid_btn:hover {
   background: #ffffff;
   color: #fd695a;
 }
-.service-item {
+.service-content__grid_items {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.service-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 33px 25px 22px;
+}
+.service-item__icon {
+  width: 71px;
+  height: 71px;
+  padding: 16px;
+  background: #E9F6EE;
+  border-radius: 50%;
+}
+.service-item__icon_img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

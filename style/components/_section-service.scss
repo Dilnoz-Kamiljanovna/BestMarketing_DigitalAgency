@@ -5,7 +5,7 @@
     &-content {
         @include flexBetween;
 
-        &__wrap {
+        &__grid {
             max-width: 523px;
             width: 100%;
             &_question-title {
@@ -48,16 +48,29 @@
             }
 
             &_items {
-                //    @include flexBetween;
-                // display: flex;
-                // flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 32px;
             }
         }
     }
 }
 
 .service-item {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    @include flexCenter;
+    flex-direction: column;
+    padding: 33px 25px 22px;
+    
+    &__icon {
+        width: 71px;
+        height: 71px;
+        padding: 16px;
+        background: $backgroundIcon;
+        border-radius: 50%;
+
+        &_img {
+            width: 100%;
+        }
+    }
 }
