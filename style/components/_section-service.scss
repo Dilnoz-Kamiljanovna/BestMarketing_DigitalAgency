@@ -58,19 +58,106 @@
 }
 
 .service-item {
+    width: 269px;
     @include flexCenter;
     flex-direction: column;
     padding: 33px 25px 22px;
-    
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 10px;
+        border-radius: 0 0 10px 10px;
+        opacity: 0.7;
+        box-shadow: 0px 30px 80px rgba(44, 22, 84, 0.07);
+        transition: 0.7s;
+    }
+    &:nth-child(1) {
+        &::after {
+            background: $greenIcon;
+        }
+        &:hover .green-icon {
+            background: $greenIcon;
+        }
+        &:hover button {
+            color: $greenIcon;
+        }
+    }
+    &:nth-child(2) {
+        &::after {
+            background: $violetIcon;
+        }
+        &:hover .violet-icon {
+            background: $violetIcon;
+        }
+        &:hover button {
+            color: $violetIcon;
+        }
+    }
+    &:nth-child(3) {
+        &::after {
+            background: $orangeIcon;
+        }
+        &:hover .orange-icon {
+            background: #bc5c560f;
+        }
+        &:hover button {
+            color: $orangeIcon;
+        }
+    }
+    &:nth-child(4) {
+        &::after {
+            background: $blueIcon;
+        }
+        &:hover .blue-icon {
+            background: $backgroundIcon;
+        }
+        &:hover button {
+            color: $blueIcon;
+        }
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
     &__icon {
         width: 71px;
         height: 71px;
         padding: 16px;
-        background: $backgroundIcon;
         border-radius: 50%;
+        background-color: $backgroundIcon;
 
         &_img {
             width: 100%;
         }
+    }
+    &__title {
+        margin-block: 16px 8px;
+        font-family: $MuB;
+        font-size: 20px;
+        line-height: 28px;
+        color: $lightDark;
+    }
+    &__text {
+        margin-bottom: 12px;
+        font-family: $DM-R;
+        font-size: 13.5px;
+        line-height: 26px;
+        color: $lightGrey;
+    }
+    &__btn {
+        font-family: $DM-M;
+        font-size: 12px;
+        line-height: 26px;
+        color: $grey;
+        text-decoration: underline;
+        border: none;
+        background: transparent;
     }
 }

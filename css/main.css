@@ -17,8 +17,9 @@ body {
   background: antiquewhite;
 }
 
-.test {
-  width: 100px;
+button {
+  cursor: pointer;
+  transition: 0.4s;
 }
 
 @font-face {
@@ -578,19 +579,96 @@ body {
 }
 
 .service-item {
+  width: 269px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 33px 25px 22px;
+  position: relative;
+  cursor: pointer;
+}
+.service-item::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 10px;
+  border-radius: 0 0 10px 10px;
+  opacity: 0.7;
+  box-shadow: 0px 30px 80px rgba(44, 22, 84, 0.07);
+  transition: 0.7s;
+}
+.service-item:nth-child(1)::after {
+  background: #34D27B;
+}
+.service-item:nth-child(1):hover .green-icon {
+  background: #34D27B;
+}
+.service-item:nth-child(1):hover button {
+  color: #34D27B;
+}
+.service-item:nth-child(2)::after {
+  background: #7879F1;
+}
+.service-item:nth-child(2):hover .violet-icon {
+  background: #7879F1;
+}
+.service-item:nth-child(2):hover button {
+  color: #7879F1;
+}
+.service-item:nth-child(3)::after {
+  background: #FD695A;
+}
+.service-item:nth-child(3):hover .orange-icon {
+  background: rgba(188, 92, 86, 0.0588235294);
+}
+.service-item:nth-child(3):hover button {
+  color: #FD695A;
+}
+.service-item:nth-child(4)::after {
+  background: #53C8FF;
+}
+.service-item:nth-child(4):hover .blue-icon {
+  background: #E9F6EE;
+}
+.service-item:nth-child(4):hover button {
+  color: #53C8FF;
+}
+.service-item:hover::after {
+  width: 100%;
 }
 .service-item__icon {
   width: 71px;
   height: 71px;
   padding: 16px;
-  background: #E9F6EE;
   border-radius: 50%;
+  background-color: #E9F6EE;
 }
 .service-item__icon_img {
   width: 100%;
+}
+.service-item__title {
+  margin-block: 16px 8px;
+  font-family: "Mulish-Bold";
+  font-size: 20px;
+  line-height: 28px;
+  color: #37383d;
+}
+.service-item__text {
+  margin-bottom: 12px;
+  font-family: "DMSans-Regular";
+  font-size: 13.5px;
+  line-height: 26px;
+  color: #747474;
+}
+.service-item__btn {
+  font-family: "DMSans-Medium";
+  font-size: 12px;
+  line-height: 26px;
+  color: #3d3d3f;
+  text-decoration: underline;
+  border: none;
+  background: transparent;
 }/*# sourceMappingURL=main.css.map */
