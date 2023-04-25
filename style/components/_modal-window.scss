@@ -9,6 +9,11 @@
     opacity: 0;
     visibility: hidden;
 
+    &.open {
+        visibility: visible;
+        opacity: 1;
+    }
+
     &-window {
         min-height: 100%;
         @include flexCenter;
@@ -36,12 +41,16 @@
                     color: $white;
                 }
 
-                & > a {
+                & > button {
                     position: absolute;
                     right: 10px;
                     top: 10px;
                     font-size: 15px;
                     color: $white;
+                    width: 18px;
+                    height: 18px;
+                    border: none;
+                    background: transparent;
                 }
             }
 

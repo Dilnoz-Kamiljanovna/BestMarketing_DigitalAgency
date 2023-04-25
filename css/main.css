@@ -19,7 +19,7 @@ body {
 
 button {
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 @font-face {
@@ -158,6 +158,10 @@ button {
   opacity: 0;
   visibility: hidden;
 }
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
 .modal-window {
   min-height: 100%;
   display: flex;
@@ -188,12 +192,16 @@ button {
   border-radius: 10px;
   color: #ffffff;
 }
-.modal-window__content_head > a {
+.modal-window__content_head > button {
   position: absolute;
   right: 10px;
   top: 10px;
   font-size: 15px;
   color: #ffffff;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: transparent;
 }
 .modal-window__content_body {
   max-width: 350px;
@@ -362,7 +370,6 @@ button {
   position: relative;
 }
 .header-banner__content_main-img {
-  max-width: 599px;
   width: 100%;
 }
 @media only screen and (max-width: 1300px) {
@@ -511,27 +518,32 @@ button {
   }
 }
 
-.service {
+.service,
+.about {
   width: 100%;
   margin-block: 153px 133px;
 }
-.service-content {
+.service-content,
+.about-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.service-content__grid {
+.service-content__grid,
+.about-content__grid {
   max-width: 523px;
   width: 100%;
 }
-.service-content__grid_question-title {
+.service-content__grid_question-title,
+.about-content__grid_question-title {
   font-family: "Mulish-SemiBold";
   font-size: 24px;
   line-height: 50px;
   text-transform: uppercase;
   color: #fd695a;
 }
-.service-content__grid_answer-title {
+.service-content__grid_answer-title,
+.about-content__grid_answer-title {
   margin-block: 8px 6px;
   font-family: "Mulish-Bold";
   font-size: 42px;
@@ -540,13 +552,8 @@ button {
   text-transform: capitalize;
   position: relative;
 }
-.service-content__grid_answer-title::before {
-  position: absolute;
-  content: url(../images/icon-rocket.png);
-  top: 55px;
-  left: 367px;
-}
-.service-content__grid_text {
+.service-content__grid_text,
+.about-content__grid_text {
   width: 100%;
   margin-block: 25px;
   font-family: "Mulish-SemiBold";
@@ -554,7 +561,8 @@ button {
   line-height: 26px;
   color: #515151;
 }
-.service-content__grid_btn {
+.service-content__grid_btn,
+.about-content__grid_btn {
   width: 203px;
   height: 50px;
   border-radius: 50px;
@@ -567,15 +575,33 @@ button {
   font-size: 18px;
   line-height: 28px;
 }
-.service-content__grid_btn:hover {
+.service-content__grid_btn:hover,
+.about-content__grid_btn:hover {
   background: #ffffff;
   color: #fd695a;
 }
-.service-content__grid_items {
+.service-content__grid_items,
+.about-content__grid_items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 32px;
+}
+.service-content__img,
+.about-content__img {
+  max-width: 651px;
+  width: 100%;
+}
+.service-content__img > img,
+.about-content__img > img {
+  width: 100%;
+}
+
+.rocket::before {
+  position: absolute;
+  content: url(../images/icon-rocket.png);
+  top: 55px;
+  left: 400px;
 }
 
 .service-item {
@@ -604,7 +630,7 @@ button {
   background: #34D27B;
 }
 .service-item:nth-child(1):hover .green-icon {
-  background: #34D27B;
+  background: rgba(52, 210, 123, 0.2392156863);
 }
 .service-item:nth-child(1):hover button {
   color: #34D27B;
@@ -613,7 +639,7 @@ button {
   background: #7879F1;
 }
 .service-item:nth-child(2):hover .violet-icon {
-  background: #7879F1;
+  background: rgba(120, 120, 241, 0.2784313725);
 }
 .service-item:nth-child(2):hover button {
   color: #7879F1;
@@ -631,7 +657,7 @@ button {
   background: #53C8FF;
 }
 .service-item:nth-child(4):hover .blue-icon {
-  background: #E9F6EE;
+  background: rgba(83, 200, 255, 0.2196078431);
 }
 .service-item:nth-child(4):hover button {
   color: #53C8FF;

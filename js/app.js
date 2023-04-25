@@ -1,16 +1,24 @@
 const contactUs = document.querySelector(".header-top__btn")
-const modalWindow = document.querySelector(".form")
-const btn = document.querySelector("#close")
+const modalWindow = document.querySelector(".modal")
+const close = document.querySelector("#close")
+const submit = document.querySelector(".modal-window__content_body-btn")
+const start = document.querySelector(".banner-btn__start")
+const form = document.querySelector(".modal-window__content_body")
 
-contactUs.addEventListener("click", ()=>{
+contactUs.addEventListener("click", () => {
     modalWindow.classList.add("open")
 })
 
-btn.addEventListener('click', ()=>{
-    modalWindow.classList.add("hidden")
+start.addEventListener('click', ()=> {
+    modalWindow.classList.add("open")
 })
 
-if (condition) {
-    
-}
+close.addEventListener("click", () => {
+    modalWindow.classList.remove("open")
+})
 
+submit.addEventListener("click", (e) => {
+    e.preventDefault()
+    form.reset()
+    modalWindow.classList.remove("open")
+})
