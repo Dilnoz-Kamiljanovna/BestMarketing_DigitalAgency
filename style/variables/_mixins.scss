@@ -36,3 +36,10 @@
     line-height: 50px;
     color: $orange;
 }
+
+@mixin footerBottom {
+    font-family: $R;
+    font-size: 14px;
+    line-height: 14px;
+    color: $footerBottom;
+}

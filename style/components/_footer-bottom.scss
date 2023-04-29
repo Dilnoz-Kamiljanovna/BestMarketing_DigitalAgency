@@ -1,0 +1,22 @@
+.footer-bottom {
+    margin-top: 42px;
+    border-top: solid 1px #75757559;
+    // opacity: 0.2;
+}
+.footer-content {
+    margin-block: 26px;
+    @include flexBetween;
+
+    &__text {
+        @include footerBottom;
+    }
+    &__list {
+        @include flexBetween;
+        gap: 52px;
+
+        &_item {
+            @include footerBottom;
+            text-transform: capitalize;
+        }
+    }
+}

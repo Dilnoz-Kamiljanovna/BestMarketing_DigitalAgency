@@ -1,0 +1,100 @@
+.footer {
+    margin: 126px auto 42px;
+    &-top {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+
+            &_main {
+                display: flex;
+                flex-direction: column;
+
+                &-logo {
+                    margin-bottom: 36px;
+                }
+
+                &-location {
+                    gap: 11px;
+                }
+                &-tel {
+                    margin-block: 28px;
+                    gap: 10px;
+                }
+                &-mail {
+                    gap: 9px;
+                }
+
+                & > a {
+                    display: flex;
+                    align-items: center;
+
+                    & > span {
+                        font-family: $DM-R;
+                        font-size: 16px;
+                        line-height: 32px;
+                        color: $lightDark;
+                        transition: 0.4s;
+                    }
+                    &:hover > span {
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            &_item {
+                display: flex;
+                flex-direction: column;
+                gap: 26px;
+
+                &-title {
+                    font-family: $MuB;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $grey;
+                }
+                &-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 28px;
+
+                    & > li > a {
+                        font-family: $MuS;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: $footerGrey;
+                    }
+                }
+
+                &-form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    & > label,
+                    & > input {
+                        text-transform: capitalize;
+                        font-family: $MuR;
+                        font-size: 16px;
+                        line-height: 150%;
+                    }
+
+                    & > label {
+                        color: $footerGrey;
+                    }
+
+                    & > input {
+                        color: $placeholder;
+                        padding: 16px;
+                        border: 1px solid rgba(179, 179, 179, 0.21);
+                        border-radius: 8px;
+                        background: $white;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
